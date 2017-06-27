@@ -1,0 +1,8 @@
+ch\zuehlke\bar\ejbbasics\UserDao.class
+ch\zuehlke\bar\ejbbasics\TaskDaoImpl.class
+ch\zuehlke\bar\ejbbasics\TaskDao.class
+ch\zuehlke\bar\ejbbasics\Task.class
+ch\zuehlke\bar\ejbbasics\services\RemoteTaskService.class
+ch\zuehlke\bar\ejbbasics\User.class
+ch\zuehlke\bar\ejbbasics\UserDaoImpl.class
+ch\zuehlke\bar\ejbbasics\services\TaskBean.class

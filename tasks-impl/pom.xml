@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ch.zuehlke.bar.ejbbasics</groupId>
+        <artifactId>ejbbasics-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>tasks-impl</artifactId>
+    <packaging>jar</packaging>
+    <name>WildFly Quickstarts: Tasks</name>
+    <description>WildFly Quickstarts: Tasks</description>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <distribution>repo</distribution>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
+    </licenses>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- JBoss distributes a complete set of Java EE 7 APIs including
+                a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
+                a collection) of artifacts. We use this here so that we always get the correct 
+                versions of artifacts. Here we use the jboss-javaee-6.0-with tools stack 
+                (you can read this as the JBoss stack of the Java EE 7 APIs, with some extras
+                tools for your project, such as Arquillian for testing) -->
+            <dependency>
+                <groupId>org.jboss.bom</groupId>
+                <artifactId>jboss-javaee-6.0-with-tools</artifactId>
+                <version>${version.jboss.bom}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+    
+        <!-- Dependencies on the ejb and web modules so that they can be found by the ear plugin -->
+<!--         <dependency>
+            <groupId>ch.zuehlke.bar.ejbbasics</groupId>
+            <artifactId>tasks-api</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency> -->
+
+        <!-- Import the CDI API, we use provided scope as the API is included in WildFly 8 -->
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Import the JPA API, we use provided scope as the API is included in WildFly 8 -->
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Import the EJB API, we use provided scope as the API is included in WildFly 8 -->
+        <dependency>
+            <groupId>org.jboss.spec.javax.ejb</groupId>
+            <artifactId>jboss-ejb-api_3.1_spec</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+
+    <profiles>
+
+    </profiles>
+</project>
