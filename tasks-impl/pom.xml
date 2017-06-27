@@ -42,14 +42,6 @@
     </dependencyManagement>
 
     <dependencies>
-    
-        <!-- Dependencies on the ejb and web modules so that they can be found by the ear plugin -->
-<!--         <dependency>
-            <groupId>ch.zuehlke.bar.ejbbasics</groupId>
-            <artifactId>tasks-api</artifactId>
-            <version>${project.version}</version>
-            <scope>compile</scope>
-        </dependency> -->
 
         <!-- Import the CDI API, we use provided scope as the API is included in WildFly 8 -->
         <dependency>
