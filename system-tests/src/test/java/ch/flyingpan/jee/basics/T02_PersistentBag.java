@@ -2,15 +2,18 @@ package ch.flyingpan.jee.basics;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
+
+import java.util.List;
+
 import javax.naming.NamingException;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import ch.flyingpan.jee.basics.factory.ServiceFactory;
 import ch.flyingpan.jee.basics.services.RemoteTaskService;
 
-public class LazyLoading {
-
+public class T02_PersistentBag {
 	
 	RemoteTaskService taskService;
 	
@@ -20,11 +23,11 @@ public class LazyLoading {
 	}
 	
 	@Test
-	public void getUserWithTasks() {
-		User user = taskService.getUser("flyingpan");
+	public void testGetAllTasksForUser() throws NamingException {
+		List<Task> tasks = taskService.getAll("flyingpan");
+		assertThat(tasks.size(), is(2));
 		
-		//default setup with 2 tasks for flyingpan
-		assertThat(user.getTasks().size(), is(2));
 	}
-	
+
+
 }

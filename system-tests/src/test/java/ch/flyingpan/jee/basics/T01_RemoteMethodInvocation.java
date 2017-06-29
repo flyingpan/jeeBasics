@@ -3,16 +3,15 @@ package ch.flyingpan.jee.basics;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-import java.util.List;
-
 import javax.naming.NamingException;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import ch.flyingpan.jee.basics.factory.ServiceFactory;
 import ch.flyingpan.jee.basics.services.RemoteTaskService;
 
-public class PersistentBag {
+public class T01_RemoteMethodInvocation {
 	
 	RemoteTaskService taskService;
 	
@@ -22,11 +21,10 @@ public class PersistentBag {
 	}
 	
 	@Test
-	public void testGetAllTasksForUser() throws NamingException {
-		List<Task> tasks = taskService.getAll("flyingpan");
-		assertThat(tasks.size(), is(2));
+	public void testCreateTask() throws NamingException {
+		TaskStatistics taskStatisticsBefore = taskService.getTaskStatistics();
+		assertThat(taskStatisticsBefore.getTotalTasks(), is(2));
 		
 	}
-
 
 }

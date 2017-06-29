@@ -1,6 +1,6 @@
 package ch.flyingpan.jee.basics;
 
-import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
 
 import javax.naming.NamingException;
@@ -8,9 +8,12 @@ import javax.naming.NamingException;
 import org.junit.Before;
 import org.junit.Test;
 
+import ch.flyingpan.jee.basics.factory.ServiceFactory;
 import ch.flyingpan.jee.basics.services.RemoteTaskService;
 
-public class RemoteMethodInvocation {
+//Further readings https://www.ibm.com/developerworks/library/j-ts1/index.html
+
+public class T05_ManagedEntitiesWithAutocommit {
 	
 	RemoteTaskService taskService;
 	
@@ -21,9 +24,9 @@ public class RemoteMethodInvocation {
 	
 	@Test
 	public void testCreateTask() throws NamingException {
-		TaskStatistics taskStatisticsBefore = taskService.getTaskStatistics();
-		assertThat(taskStatisticsBefore.getTotalTasks(), is(2));
-		
-	}
+		taskService.changeUsername("musteruser", "mu");
 
+		User user = taskService.getUser("musteruser");
+		assertThat(user, notNullValue());
+	}
 }

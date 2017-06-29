@@ -1,4 +1,5 @@
-C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\ServiceFactory.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\factory\ServiceFactory.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\StatelessSessionBean.java
 C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\LostUpdate.java
 C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\EntityManager.java
 C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\ManagedEntitiesWithAutocommit.java

@@ -1,7 +1,8 @@
 ch\flyingpan\jee\basics\RemoteMethodInvocation.class
-ch\flyingpan\jee\basics\ServiceFactory.class
 ch\flyingpan\jee\basics\LazyLoading.class
 ch\flyingpan\jee\basics\PersistentBag.class
 ch\flyingpan\jee\basics\LostUpdate.class
 ch\flyingpan\jee\basics\EntityManager.class
+ch\flyingpan\jee\basics\factory\ServiceFactory.class
 ch\flyingpan\jee\basics\ManagedEntitiesWithAutocommit.class
+ch\flyingpan\jee\basics\StatelessSessionBean.class

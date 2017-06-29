@@ -8,9 +8,11 @@ import javax.naming.NamingException;
 import org.junit.Before;
 import org.junit.Test;
 
+import ch.flyingpan.jee.basics.factory.ServiceFactory;
 import ch.flyingpan.jee.basics.services.RemoteTaskService;
 
-public class EntityManager {
+public class T03_LazyLoading {
+
 	
 	RemoteTaskService taskService;
 	
@@ -20,10 +22,11 @@ public class EntityManager {
 	}
 	
 	@Test
-	public void testCreateTask() throws NamingException {
-		TaskStatistics taskStatisticsBefore = taskService.getTaskStatistics();
-		int totalTasksBefore = taskStatisticsBefore.getTotalTasks();
-		TaskStatistics taskStatisticsAfter = taskService.createTask("flyingpan", new Task("someTask"));
-		assertThat(taskStatisticsAfter.getTotalTasks(), is(totalTasksBefore+1));
+	public void getUserWithTasks() {
+		User user = taskService.getUser("flyingpan");
+		
+		//default setup with 2 tasks for flyingpan
+		assertThat(user.getTasks().size(), is(2));
 	}
+	
 }

@@ -2,8 +2,6 @@
 package ch.flyingpan.jee.basics;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

@@ -16,11 +16,11 @@ public interface RemoteTaskService {
 
 	TaskStatistics getTaskStatistics();
 	
-	void longOperation();
 	
 	void updateTask(Task task);
 
 	Task getTask(long id);
 	
 	void changeUsername(String oldUsername, String newUsername);
+
 }

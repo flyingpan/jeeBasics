@@ -24,7 +24,7 @@ public class TaskBean implements RemoteTaskService{
 	
 	@EJB
 	UserDao userDao;
-
+	
 	@Override
 	public TaskStatistics createTask(String username, Task task) {
 		User user = loadUser(username);
@@ -53,11 +53,6 @@ public class TaskBean implements RemoteTaskService{
 		return new TaskStatistics(userDao.getAll());
 	}
 
-	@Override
-	public void longOperation() {
-		taskDao.longOperation();
-		
-	}
 
 	@Override
 	public void updateTask(Task task) {
@@ -74,10 +69,9 @@ public class TaskBean implements RemoteTaskService{
 	public void changeUsername(String oldUsername, String newUsername) {
 		User user = loadUser(oldUsername);
 		user.setUsername(newUsername);
-		if(newUsername.length()>4){
+		if(newUsername.length() > 4){
 			userDao.updateUser(user);
 		}
-		
 	}
 	
 

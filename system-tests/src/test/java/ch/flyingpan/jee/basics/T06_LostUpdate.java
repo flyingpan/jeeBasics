@@ -6,9 +6,10 @@ import javax.naming.NamingException;
 import org.junit.Before;
 import org.junit.Test;
 
+import ch.flyingpan.jee.basics.factory.ServiceFactory;
 import ch.flyingpan.jee.basics.services.RemoteTaskService;
 
-public class LostUpdate {
+public class T06_LostUpdate {
 	
 	RemoteTaskService taskService;
 	
