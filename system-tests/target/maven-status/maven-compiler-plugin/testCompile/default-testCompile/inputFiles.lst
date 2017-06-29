@@ -1,1 +1,7 @@
-C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\zuehlke\bar\CallToBean.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\ServiceFactory.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\LostUpdate.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\EntityManager.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\ManagedEntitiesWithAutocommit.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\PersistentBag.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\RemoteMethodInvocation.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\LazyLoading.java

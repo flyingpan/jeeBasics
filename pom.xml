@@ -9,11 +9,11 @@
         <artifactId>jboss-parent</artifactId>
         <version>12</version>
     </parent>
-    <groupId>ch.zuehlke.bar.ejbbasics</groupId>
-    <artifactId>ejbbasics-parent</artifactId>
+    <groupId>ch.flyingpan.jee.basics</groupId>
+    <artifactId>jeebasics-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>EJB Basics</name>
-    <description>Sample to grasp some ejb basics</description>
+    <name>JEE Basics</name>
+    <description>Sample to grasp some jee basics</description>
     <packaging>pom</packaging>
 	
 	    <properties>
@@ -117,7 +117,7 @@
         <module>ear</module>
         <module>tasks-api</module>
         <module>tasks-impl</module>
-		<!--<module>system-tests</module>-->	
+		<module>system-tests</module>	
     </modules>
 
 

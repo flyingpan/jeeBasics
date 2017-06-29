@@ -19,6 +19,13 @@ public class Task implements Serializable {
     private User owner;
 
     private String title;
+    
+    @Enumerated(EnumType.STRING)
+    private Status status;
+    
+//    @Version
+    @Column(name = "OLVERSION")
+    private int optimisticLockingVersion;
 
     public Task() {
     }
@@ -26,6 +33,7 @@ public class Task implements Serializable {
     public Task(String title) {
         super();
         this.title = title;
+        this.status = Status.NEW;
     }
 
     public Long getId() {
@@ -51,6 +59,14 @@ public class Task implements Serializable {
     public void setTitle(String title) {
         this.title = title;
     }
+    
+    public Status getStatus() {
+    	return status;
+    }
+    
+    public void setStatus(Status status) {
+    	this.status = status;
+    }
 
     @Override
     public int hashCode() {
@@ -58,6 +74,8 @@ public class Task implements Serializable {
         int result = 1;
         result = prime * result + ((owner == null) ? 0 : owner.hashCode());
         result = prime * result + ((title == null) ? 0 : title.hashCode());
+        result = prime * result + ((status == null) ? 0 : status.hashCode());
+
         return result;
     }
 
@@ -80,7 +98,13 @@ public class Task implements Serializable {
                 return false;
         } else if (!title.equals(other.title))
             return false;
+        if (status == null) {
+            if (other.status != null)
+                return false;
+        } else if (!status.equals(other.status))
+            return false;
         return true;
     }
+
 
 }

@@ -2,6 +2,8 @@
 package ch.flyingpan.jee.basics;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -53,8 +55,28 @@ public class TaskDaoImpl implements TaskDao {
         }
         em.remove(task);
     }
+    
+    
+    @Override
+   // @TransactionTimeout(unit=TimeUnit.MINUTES, value=10)
+    public void longOperation(){
+    	
+    }
 
     private TypedQuery<Task> querySelectAllTasksFromUser(User user) {
         return em.createQuery("SELECT t FROM Task t WHERE t.owner = ?", Task.class).setParameter(1, user);
     }
+
+	@Override
+	public void updateTask(Task task) {
+        if (!em.contains(task)) {
+            task = em.merge(task);
+        }
+	}
+
+	@Override
+	public Task getTask(long id) {
+		return em.createQuery("SELECT t FROM Task t WHERE t.id = ?", Task.class)
+				.setParameter(1, id).getSingleResult();
+	}
 }

@@ -6,13 +6,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>ch.zuehlke.bar.ejbbasics</groupId>
-        <artifactId>ejbbasics-parent</artifactId>
+        <groupId>ch.flyingpan.jee.basics</groupId>
+        <artifactId>jeebasics-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>ejbbasics-ear</artifactId>
+    <artifactId>jeebasics-ear</artifactId>
     <packaging>ear</packaging>
 
     <name>deployable ear</name>
@@ -29,17 +29,11 @@
     <dependencies>
         <!-- Dependencies on the ejb and web modules so that they can be found by the ear plugin -->
         <dependency>
-            <groupId>ch.zuehlke.bar.ejbbasics</groupId>
+            <groupId>ch.flyingpan.jee.basics</groupId>
             <artifactId>tasks-impl</artifactId>
             <version>${project.version}</version>
             <type>ejb</type>
         </dependency>
-<!--         <dependency>
-            <groupId>ch.zuehlke.bar.ejbbasics</groupId>
-            <artifactId>tasks-api</artifactId>
-            <version>${project.version}</version>
-            <type>ejb</type>
-        </dependency> -->
          
     </dependencies>
 

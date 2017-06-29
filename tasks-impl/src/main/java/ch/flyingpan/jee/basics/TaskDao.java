@@ -17,4 +17,10 @@ public interface TaskDao {
     List<Task> getForTitle(User user, String title);
 
     void deleteTask(Task task);
+    
+    void longOperation();
+    
+    void updateTask(Task task);
+    
+    Task getTask(long id);
 }
