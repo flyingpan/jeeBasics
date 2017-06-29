@@ -15,6 +15,8 @@ import ch.flyingpan.jee.basics.services.RemoteTaskService;
 
 public class T02_PersistentBag {
 	
+	//https://www.kingsware.de/2011/03/15/ordering-collections-with-jpa/ PersistentBag ordering
+	
 	RemoteTaskService taskService;
 	
 	@Before

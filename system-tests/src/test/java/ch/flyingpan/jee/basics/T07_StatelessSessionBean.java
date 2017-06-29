@@ -23,7 +23,7 @@ public class T07_StatelessSessionBean {
 	}
 	
 	@Test
-	public void testCreateTask() throws NamingException {
+	public void contractThatStatelessSessionBeanNotEnsuredByContainer() throws NamingException {
 		sampleService.emptyChangeLog();
 		
 		sampleService.performChange("some change");

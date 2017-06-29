@@ -2,6 +2,7 @@ package ch.flyingpan.jee.basics.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.ejb.EJB;
 import javax.ejb.Remote;
@@ -9,6 +10,9 @@ import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 
+import org.jboss.ejb3.annotation.TransactionTimeout;
+
+import ch.flyingpan.jee.basics.Task;
 import ch.flyingpan.jee.basics.TaskDao;
 
 @TransactionAttribute(TransactionAttributeType.REQUIRED)
@@ -41,9 +45,24 @@ public class SampleBean implements RemoteSampleService {
 		throw new RuntimeException("Called method throwing runtime exception.");
 	}
 
+//	@Override
+//    @TransactionTimeout(unit=TimeUnit.SECONDS, value=5)
+//	public int longOperation() {
+//		return taskDao.longOperation();
+//	}
+	
 	@Override
-	public void longOperation() {
-		taskDao.longOperation();
+	public void updateTask(Task task) {
+		
+		updateTaskInNewTransaction(task);
+		throw new RuntimeException("transaction fails, but task was added in new transaction");
+		
+	}
+	
+	@Override
+	@TransactionAttribute(TransactionAttributeType.REQUIRES_NEW)
+	public void updateTaskInNewTransaction(Task task) {
+		taskDao.updateTask(task);
 	}
 
 }

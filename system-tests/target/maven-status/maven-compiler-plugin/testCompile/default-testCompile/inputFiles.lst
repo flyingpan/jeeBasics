@@ -1,8 +1,9 @@
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\T04_EntityManager.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\T02_PersistentBag.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\T07_StatelessSessionBean.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\T05_ManagedEntitiesWithAutocommit.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\T08_Annotations.java
 C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\factory\ServiceFactory.java
-C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\StatelessSessionBean.java
-C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\LostUpdate.java
-C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\EntityManager.java
-C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\ManagedEntitiesWithAutocommit.java
-C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\PersistentBag.java
-C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\RemoteMethodInvocation.java
-C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\LazyLoading.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\T06_LostUpdate.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\T03_LazyLoading.java
+C:\dev\projects\ejbbasics\system-tests\src\test\java\ch\flyingpan\jee\basics\T01_RemoteMethodInvocation.java

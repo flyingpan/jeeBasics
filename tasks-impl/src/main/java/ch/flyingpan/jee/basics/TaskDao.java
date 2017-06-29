@@ -18,8 +18,6 @@ public interface TaskDao {
 
     void deleteTask(Task task);
     
-    void longOperation();
-    
     void updateTask(Task task);
     
     Task getTask(long id);
