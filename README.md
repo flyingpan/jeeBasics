@@ -1,5 +1,5 @@
 # JEE Basics
-This projct helps developers that newly start with a JEE/EJB project. It contains different system tests that fail. Each of the test shows a pittfall a developer might fall into that has not yet worked with JEE/EJB.
+This projct helps developers that newly start with a JEE/EJB project. It contains different system tests that fail. Each of the test shows a pittfall a developer might fall into that is new to JEE/EJB.
 
 ## Setup
 In order the to be able to run the tests a JEE Container must be installed and started locally. The samples were tested with Wildfly 10.0.0.Final. To keep things simple I did not use Arquillian for testing. After each fixed test the ear must be redeployed and the Test must be reexeccuted.
@@ -73,7 +73,9 @@ Hibernate supports optimistic locking, but to use it a field must be available t
 The container does not ensure that there is not state on a stateless session bean. It is a contract that the developer agrees on. Violating the contract can lead to difficult non deterministic behaviour.
 
 ### Annotations
+Annotations (@TransactionAttribute) do not apply in a call within the bean but only when being called through the bean proxy.
 
+The TransactionTimeout setting is only working when a new Transaction is started at the point, and not when the TransactionAttribute is Required and the call has already opened a transaction. (sample incomplete).
 
 
 ## Solutions
