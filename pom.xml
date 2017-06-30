@@ -115,7 +115,6 @@
 
     <modules>
         <module>ear</module>
-        <module>tasks-api</module>
         <module>tasks-impl</module>
 		<module>system-tests</module>	
     </modules>

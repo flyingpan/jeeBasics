@@ -27,6 +27,7 @@ public class T02_PersistentBag {
 	@Test
 	public void testGetAllTasksForUser() throws NamingException {
 		List<Task> tasks = taskService.getAll("flyingpan");
+//		tasks.add(new Task(""));
 		assertThat(tasks.size(), is(2));
 		
 	}
