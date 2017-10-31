@@ -3,7 +3,7 @@ package ch.flyingpan.jee.basics;
 import java.io.Serializable;
 import java.util.List;
 
-public class TaskStatistics implements Serializable{
+public class TaskStatistics implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 

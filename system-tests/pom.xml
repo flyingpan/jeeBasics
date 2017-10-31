@@ -65,15 +65,6 @@
 			<scope>compile</scope>
 		</dependency>
 
-
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>4.0.1.Final</version>
-			<scope>test</scope>
-		</dependency>
-
-
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>

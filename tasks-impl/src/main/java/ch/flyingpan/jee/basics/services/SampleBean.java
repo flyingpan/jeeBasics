@@ -2,15 +2,12 @@ package ch.flyingpan.jee.basics.services;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import javax.ejb.EJB;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
-
-import org.jboss.ejb3.annotation.TransactionTimeout;
 
 import ch.flyingpan.jee.basics.Task;
 import ch.flyingpan.jee.basics.TaskDao;

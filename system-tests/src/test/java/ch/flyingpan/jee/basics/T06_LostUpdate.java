@@ -33,7 +33,6 @@ public class T06_LostUpdate {
 		inParallelChangedTask.setTitle("changed Titel 2");
 		
 		taskService.updateTask(inParallelChangedTask);
-		
 	}
 
 	private void setTaskToOrigState() {

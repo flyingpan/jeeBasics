@@ -23,7 +23,7 @@ public class Task implements Serializable {
     @Enumerated(EnumType.STRING)
     private Status status;
     
-//    @Version
+    @Version
     @Column(name = "OLVERSION")
     private int optimisticLockingVersion;
 

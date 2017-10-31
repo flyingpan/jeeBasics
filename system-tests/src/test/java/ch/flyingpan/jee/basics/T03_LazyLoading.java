@@ -13,7 +13,6 @@ import ch.flyingpan.jee.basics.services.RemoteTaskService;
 
 public class T03_LazyLoading {
 
-	
 	RemoteTaskService taskService;
 	
 	@Before

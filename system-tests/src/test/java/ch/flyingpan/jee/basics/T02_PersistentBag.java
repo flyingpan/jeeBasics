@@ -15,8 +15,6 @@ import ch.flyingpan.jee.basics.services.RemoteTaskService;
 
 public class T02_PersistentBag {
 	
-	//https://www.kingsware.de/2011/03/15/ordering-collections-with-jpa/ PersistentBag ordering
-	
 	RemoteTaskService taskService;
 	
 	@Before
@@ -27,9 +25,7 @@ public class T02_PersistentBag {
 	@Test
 	public void testGetAllTasksForUser() throws NamingException {
 		List<Task> tasks = taskService.getAll("flyingpan");
-//		tasks.add(new Task(""));
 		assertThat(tasks.size(), is(2));
-		
 	}
 
 
